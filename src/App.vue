@@ -13,15 +13,27 @@
         <router-view></router-view>
       </v-container>
     </v-content>
+    <v-footer app>
+      <span>Created by <a href="https://enotcode.com" target="_blank">enotcode</a></span>
+    </v-footer>
 </v-app>
 </template>
 
 <script>
   export default{
+    mounted() {
+      const theme = localStorage.getItem("useDarkTheme");
+        if (theme) {
+          if (theme == "true") {
+            this.$vuetify.theme.dark = true;
+          } else this.$vuetify.theme.dark = false;
+      }
+    },
     methods: {
       change_color () {
-        this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+        this.$vuetify.theme.dark= !this.$vuetify.theme.dark;
+        localStorage.setItem("useDarkTheme", this.$vuetify.theme.dark.toString())      
       },
-    }
+    },
   }
 </script>
