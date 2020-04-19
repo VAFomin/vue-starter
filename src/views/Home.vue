@@ -22,7 +22,8 @@
             onSignInSuccess(googleUser) {
                 try {
                     const profile = googleUser.getBasicProfile();
-                    console.log(profile);
+                    this.$store.commit("setProfile", profile);
+                    this.$store.commit("setIsAuth", true);
                     this.$router.replace("page");
                 } catch (err) {
                     console.log(err);
