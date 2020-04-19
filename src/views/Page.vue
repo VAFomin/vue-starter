@@ -5,7 +5,7 @@
                 <div class="headline pb-4">
                     <h1>Page</h1>
                 </div>
-                <p>Hello, + {{ email }}</p>
+                <p>Hello, + {{ profile }}</p>
             </v-flex>
         </v-layout>
     </div>
@@ -15,7 +15,7 @@
     export default {
         computed: {
             email() {
-                return this.$store.getters.email
+                return this.$store.getters.profile
             }
         }
     }

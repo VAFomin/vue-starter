@@ -21,8 +21,8 @@
         methods: {
             onSignInSuccess(googleUser) {
                 try {
-                    const email = googleUser.getBasicProfile()["yu"];
-                    this.$store.commit("setEmail", email);
+                    const profile = googleUser.getBasicProfile();
+                    this.$store.commit("setProfile", profile);
                     this.$router.replace("page");
                 } catch (err) {
                     console.log(err);
