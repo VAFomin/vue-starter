@@ -22,7 +22,7 @@
             onSignInSuccess(googleUser) {
                 try {
                     const profile = googleUser.getBasicProfile();
-                    this.$store.commit("setProfile", profile);
+                    console.log(profile);
                     this.$router.replace("page");
                 } catch (err) {
                     console.log(err);
