@@ -20,9 +20,13 @@
     export default {
         methods: {
             onSignInSuccess(googleUser) {
-                const profile = googleUser.getBasicProfile();
-                console.log(profile);
-                this.$router.replace("page");
+                try {
+                    const email = googleUser.getBasicProfile()["yu"];
+                    this.$store.setEmail(email);
+                    this.$router.replace("page");
+                } catch (err) {
+                    console.log(err);
+                }
             },
             onSignInError(error) {
                 console.log('OH NOES', error)

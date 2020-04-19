@@ -1,6 +1,7 @@
 import Vue from 'vue'
-import router from "./plugins/router"
+import router from './plugins/router'
 import vuetify from './plugins/vuetify'
+import store from './store'
 import GSignInButton from 'vue-google-signin-button'
 
 import App from './App.vue'
@@ -11,5 +12,6 @@ Vue.use(GSignInButton);
 new Vue({
     router,
     vuetify,
+    store,
     render: h => h(App),
 }).$mount('#app');
