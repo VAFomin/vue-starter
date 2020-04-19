@@ -6,12 +6,11 @@
                     <h1>Home</h1>
                 </div>
                 <g-signin-button
-                        :params="googleSignInParams"
+                        :params="{client_id: '901060617777-1nic5bknq28bi7ohhj9k66398hlqtvp4.apps.googleusercontent.com'}"
                         @success="onSignInSuccess"
                         @error="onSignInError">
                     Sign in with Google
                 </g-signin-button>
-                <v-btn to="/page" x-large color="primary">Page</v-btn>
             </v-flex>
         </v-layout>
     </div>
@@ -19,13 +18,6 @@
 
 <script>
     export default {
-        data() {
-            return {
-                googleSignInParams: {
-                    clientId: '901060617777-1nic5bknq28bi7ohhj9k66398hlqtvp4.apps.googleusercontent.com'
-                }
-            }
-        },
         methods: {
             onSignInSuccess(googleUser) {
                 const profile = googleUser.getBasicProfile();
@@ -47,5 +39,6 @@
         background-color: #3c82f7;
         color: #fff;
         box-shadow: 0 3px 0 #0f69ff;
+        cursor: pointer;
     }
 </style>
