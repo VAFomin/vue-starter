@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         isAuth: false,
-        email: ""
+        profile: ""
     },
     getters: {
         isAuth: state => {
@@ -24,4 +24,4 @@ export default new Vuex.Store({
             state.profile = payload;
         }
     }
-})
+});
