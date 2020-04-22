@@ -5,7 +5,7 @@
                 <div class="headline pb-4">
                     <h1>Page</h1>
                 </div>
-                <p>Hello, + {{ profile }}</p>
+                <p>Hello, {{ profile }}</p>
             </v-flex>
         </v-layout>
     </div>
