@@ -21,7 +21,6 @@ const router = new Router({
             component: Page,
             meta: {requiresAuth: true}
         },
-
         {
             path: "*",
             name: "notFound",
