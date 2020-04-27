@@ -8,6 +8,7 @@ export const messages = {
         profile: "Профиль",
         hello: "Привет",
         notFound: "Страница не найдена",
+        homeBtn: "На главную"
     },
     en: {
         app: "App",
@@ -18,5 +19,6 @@ export const messages = {
         profile: "Profile",
         hello: "Hello",
         notFound: "Page not found",
+        homeBtn: "Go home"
     }
 };
